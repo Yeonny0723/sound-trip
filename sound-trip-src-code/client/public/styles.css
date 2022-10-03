@@ -1,0 +1,155 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    line-height: 1.7rem;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+:root {
+    --yellow: #ffb200;
+}
+
+#background {
+    width: 100vw;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+    position:fixed;
+    top:0;
+    left:0;
+    background-image: url("background.jpg");
+    z-index:-1;
+}
+
+.title > h1 {
+    color: white;
+    padding: 3vh 0;
+}
+
+.bar {
+	background: #F4EFEF;
+	width: min(30vw, 600px);
+	height: 20px;
+	border-radius: 50px;
+    margin-top: 10vh;
+}
+
+.progress {
+	height: 20px;
+	border-radius: 50px;
+	background: var(--yellow);
+	-webkit-transition: 600ms cubic-bezier(0.6, 0, 0.38, 1);
+	-moz-transition: 600ms cubic-bezier(0.6, 0, 0.38, 1);
+	-o-transition: 600ms cubic-bezier(0.6, 0, 0.38, 1);
+	-ms-transition: 600ms cubic-bezier(0.6, 0, 0.38, 1);
+	transition: 600ms cubic-bezier(0.6, 0, 0.38, 1);
+}
+
+#page-button {
+    width: max(5vw,140px);
+    height: max(3vw, 70px);
+    background-color: var(--yellow);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+    margin: 5vh 0;
+    opacity: 80%;
+}
+
+.audioBtn{
+    outline: none;
+    border: none;
+    border-radius: 100%;
+    background-color: var(--yellow);
+    color: white;
+    margin-left: 1.2vw;
+    position: absolute;
+    bottom: 2vh;
+}
+
+.audioBtn > i{
+    font-size: min(20px,3vw);
+    padding: 0.5vw;
+}
+
+#page-button:hover, .tag > label:hover{
+    transform: scale(1.1);
+    opacity: 100%;
+    background-color: var(--yellow);
+    color: white;
+}
+
+
+.tag-container{
+    display: flex;
+    width: 60vw;
+    height: max(400px,25vw);
+    overflow: scroll;
+    flex-wrap: wrap;
+}
+
+.tag-container > div {
+    margin: 0.7vw 0.2vw;
+}
+
+input[type=checkbox] + label {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(255,255,255,0.6);
+    color: black;
+    padding: 0.8vw 1vw;
+    border-radius: 15px;
+    transition: 0.1s ease-in-out;
+    opacity: 60%;
+    font-weight: 600;
+  } 
+  input[type=checkbox]:checked + label {
+    background-color: var(--yellow);
+    color: white;
+    cursor: pointer;
+} 
+
+.img-container{
+    display: flex;
+    padding: 0 8vw;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.audio-container{
+    width: max(250px,20vw);
+    height: max(150px,12vw);
+    object-fit: fill;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 1vw 1vw 1vw rgba(0,0,0,0.3);
+    position: relative;
+    margin: 0.6vw;
+    opacity: 90%;
+    transition: 0.15s ease-in-out;
+}
+
+.audio-container:hover{
+    scale: 1.05;
+    opacity: 100%;
+}
+
+.audioBtn{
+}
